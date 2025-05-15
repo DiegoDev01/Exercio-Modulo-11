@@ -69,18 +69,18 @@ header nav ul li a {
 }
 
 .sobre img {
-    width: 45%;
     height: auto;
     max-width: 500px;
     border-radius: 5px;
     border: 1px solid #add8e6;
+    width: 100%;
 }
 
 .sobre .texto {
-    width: 55%;
     font-size: 1rem;
     line-height: 1.6;
     color: #2f4f4f;
+    width: 100%;
 }
 
 .produtos {
@@ -154,6 +154,22 @@ button.add-carrinho:hover {
     background-color: #4169e1;
 }
 
+@media (min-width: 1181px) {
+    .sobre-content {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .sobre img {
+        width: 45%;
+        max-width: 500px;
+    }
+
+    .sobre .texto {
+        width: 55%;
+    }
+}
+
 @media (min-width: 641px) and (max-width: 1180px) {
     .lista-produtos {
         flex-wrap: wrap;
@@ -168,16 +184,16 @@ button.add-carrinho:hover {
     }
 
     .sobre-content {
-        flex-direction: row;
+        flex-direction: column;
     }
 
     .sobre img {
-        width: 40%;
-        max-width: 300px;
+        width: 100%;
+        max-width: none;
     }
 
     .sobre .texto {
-        width: 60%;
+        width: 100%;
     }
 }
 
@@ -201,7 +217,8 @@ button.add-carrinho:hover {
         font-size: 2rem;
     }
 
-    .sobre img, .sobre .texto {
+    .sobre img,
+    .sobre .texto {
         width: 100%;
     }
 
